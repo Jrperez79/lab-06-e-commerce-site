@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="common/main.css">
     <title>The Steak Shop</title>
+    <link rel="stylesheet" href="../common/main.css">
+    <link rel="stylesheet" href="products.css">
 </head>
-
 <body>
     <header>
         <h1>The Steak Shop</h1>
+        <nav>
+            <a href="../">Home</a>
+            <a href="products">Buy Steak</a>
+        </nav>
     </header>
 
     <main>
-        <section class="centered">
-            <p>
-                <img class="hero-image" src="assets/steak-house.jpg">
-            </p>
-            <p>
-                <a href="products">Buy Steak</a>
-            </p>
-        </section>
+        <h2>Steak</h2>
+        <ul id="steaks">
+        </ul>
     </main>
-</body>
 
+    <script src="products.js" type="module"></script>
+</body>
 </html>
