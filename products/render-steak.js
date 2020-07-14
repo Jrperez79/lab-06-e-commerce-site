@@ -1,27 +1,35 @@
-import renderSteak from '../products/render-steak.js';
-import steaks from '../data/steaks.js';
+function renderSteak(steak) {
+    const li = document.createElement('li');
+    li.className = steak.category;
+    li.title = steak.description;
 
-const test = QUnit.test;
+    const h3 = document.createElement('h3');
+    h3.textContent = steak.name;
+    li.appendChild(h3);
 
-QUnit.module('Render Fruit');
+    const img = document.createElement('img');
+    img.src = '../assets/' + steak.image;
+    img.alt = steak.name + ' image';
+    li.appendChild(img);
 
-test('renders a fruit', assert => {
-    // arrange
-    const  = {
-        id: 'apple',
-        name: 'Red Apple',
-        image: 'apple.png',
-        description: 'A sweet, delicious, forbidden-to-some treat',
-        category: 'tree-fruit',
-        price: 1.00,
-        cost: 0.25
-    };
-    const expected = '<li class="tree-fruit" title="A sweet, delicious, forbidden-to-some treat"><h3>Red Apple</h3><img src="../assets/apple.png" alt="Red Apple image"><p class="price">$1.00<button value="apple">Add</button></p></li>';
+    const p = document.createElement('p');
+    p.className = 'price';
+
+    const usd = '$' + steak.price.toFixed(2);
+    // const usd = fruit.price.toLocaleString('en-US', { 
+    //     style: 'currency', 
+    //     currency: 'USD' 
+    // });
+    p.textContent = usd;
     
-    // act
-    const dom = renderSteak(steak);
-    const html = dom.outerHTML;
-    
-    // assert
-    assert.equal(html, expected);
-});
+    const button = document.createElement('button');
+    button.textContent = 'Add';
+    button.value = steak.id;
+    p.appendChild(button);
+
+    li.appendChild(p);
+
+    return li;
+}
+
+export default renderSteak;

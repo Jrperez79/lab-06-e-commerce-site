@@ -37,7 +37,7 @@ header, main {
 
 h1 {
     font-family: 'Oswald';
-    margin-left: 500px;
+    /*margin-left: 500px;*/
 }
 
 .hidden {
@@ -49,12 +49,12 @@ h1 {
 }
 
 .hero-image {
-    margin-left: 400px;
-    justify-content: center;
     height: 250px;
+    margin-top: 50px;
 }
 
-a {
+/*a {
     align-content: center;
     margin-left: 550px;
 }
+*/
