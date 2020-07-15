@@ -1,4 +1,4 @@
-import steaks from '../data/fruits.js';
+import steaks from '../data/steak.js';
 import { findById } from '../common/utils.js';
 import renderLineItem from '../shopping-cart/render-line-item.js';
 
