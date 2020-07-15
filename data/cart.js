@@ -5,7 +5,7 @@ const cart = [{
     id: 'porterhouse',
     quantity: 2
 }, {
-    id: 'ribeye-steak',
+    id: 'rib-eye-steak',
     quantity: 1
 }, {
     id: 'sirloin-steak',

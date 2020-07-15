@@ -7,12 +7,12 @@ const tbody = document.querySelector('tbody');
 const orderTotalCell = document.getElementById('order-total');
 
 for (let i = 0; i < cart.length; i++) {
-    const lineItem = cart[i];
-    const steaks = findById(steak, lineItem.id);
-    const dom = renderLineItem(lineItem, steaks);
+    const cartItem = cart[i];
+    const steaks = findById(steak, cartItem.id);
+    const dom = renderLineItem(cartItem, steaks);
 
     tbody.appendChild(dom);
 }
 
-const orderTotal = calcOrderTotal(cart, steaks);
+const orderTotal = calcOrderTotal(cart, steak);
 orderTotalCell.textContent = toUSD(orderTotal);

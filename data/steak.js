@@ -4,8 +4,7 @@ const filetMignon = {
     image: 'filet-mignon.jpg',
     description: 'The best cut of meat, so tender',
     category: 'steak',
-    price: 20.00,
-    cost: 10.00
+    price: 20.75,
 };
 
 const porterhouse = {
@@ -14,18 +13,16 @@ const porterhouse = {
     image: 'porterhouse.jpg',
     description: 'A big cut, with a variety of flavors',
     category: 'steak',
-    price: 25.00,
-    cost: 22.00
+    price: 25.15,
 };
 
-const ribeyeSteak = {
-    id: 'ribeye-steak',
-    name: 'Ribeye',
-    image: 'ribeye.jpg',
+const ribEyeSteak = {
+    id: 'rib-eye-steak',
+    name: 'Rib-Eye',
+    image: 'rib-eye.jpg',
     description: 'Nice fat cut with tons of flavor',
     category: 'steak',
-    price: 18.00,
-    cost: 9.00
+    price: 18.21,
 };
 
 const sirloinSteak = {
@@ -34,8 +31,7 @@ const sirloinSteak = {
     image: 'sirloin.jpg',
     description: 'Most common cut, tasty and cheap',
     category: 'steak',
-    price: 10.00,
-    cost: 5.00
+    price: 10.09,
 };
 
 const skirtSteak = {
@@ -44,8 +40,7 @@ const skirtSteak = {
     image: 'skirt-steak.jpg',
     description: 'The perfect cut to make fajitas',
     category: 'steak',
-    price: 7.00,
-    cost: 3.00
+    price: 7.77,
 };
 
 const hangerSteak = {
@@ -54,14 +49,13 @@ const hangerSteak = {
     image: 'hanger-steak.jpg',
     description: 'Great for breakfast with some eggs',
     category: 'steaks',
-    price: 9.00,
-    cost: 3.00
+    price: 9.62,
 };
 
 const steaks = [
     filetMignon,
     porterhouse,
-    ribeyeSteak,
+    ribEyeSteak,
     sirloinSteak,
     skirtSteak,
     hangerSteak

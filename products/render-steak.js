@@ -1,3 +1,5 @@
+import { toUSD } from '../common/utils.js';
+
 function renderSteak(steak) {
     const li = document.createElement('li');
     li.className = steak.category;
@@ -14,17 +16,11 @@ function renderSteak(steak) {
 
     const p = document.createElement('p');
     p.className = 'price';
+    p.textContent = toUSD(steak.price);
 
-    const usd = '$' + steak.price.toFixed(2);
-    // const usd = fruit.price.toLocaleString('en-US', { 
-    //     style: 'currency', 
-    //     currency: 'USD' 
-    // });
-    p.textContent = usd;
-    
     const button = document.createElement('button');
     button.textContent = 'Add';
-    button.value = steak.id;
+    button.value = steak.code;
     p.appendChild(button);
 
     li.appendChild(p);

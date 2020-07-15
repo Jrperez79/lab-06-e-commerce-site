@@ -1,11 +1,11 @@
 import { toUSD } from '../common/utils.js';
 
-function renderLineItem(lineItem, steaks) {
+function renderLineItem(lineItem, steak) {
     const tr = document.createElement('tr');
 
     const nameCell = document.createElement('td');
     nameCell.className = 'align-left';
-    nameCell.textContent = steaks.name;
+    nameCell.textContent = steak.name;
     tr.appendChild(nameCell);
 
     const quantityCell = document.createElement('td');
@@ -13,12 +13,12 @@ function renderLineItem(lineItem, steaks) {
     tr.appendChild(quantityCell);
 
     const priceCell = document.createElement('td');
-    priceCell.textContent = toUSD(steaks.price);
+    priceCell.textContent = toUSD(steak.price);
     tr.appendChild(priceCell);
     
     const totalCell = document.createElement('td');
     totalCell.className = 'line-item-total';
-    const total = lineItem.quantity * steaks.price;
+    const total = lineItem.quantity * steak.price;
     totalCell.textContent = toUSD(total);
     tr.appendChild(totalCell);
 
