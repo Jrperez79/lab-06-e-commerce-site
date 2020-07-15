@@ -18,7 +18,7 @@ test('find product by id', assert => {
     assert.equal(foundSteak.name, expected);
 });
 
-test('find product by id returns null if not found', assert => {
+test('find a steak by id returns null if not found', assert => {
     // arrange
     const id = 'not found';
     const expected = null;
@@ -30,11 +30,11 @@ test('find product by id returns null if not found', assert => {
     assert.equal(foundSteak, expected);
 });
 
-test('calculate line total', (assert) => {
+test('calculate line total of a Porterhouse', (assert) => {
     // arrange
-    const quantity = 3;
-    const price = 2.01;
-    const expected = 6.03;
+    const quantity = 5;
+    const price = 25.00;
+    const expected = 125.00;
 
     // act 
     const total = calcLineTotal(quantity, price);
@@ -44,9 +44,9 @@ test('calculate line total', (assert) => {
 });
 
 // This one can be left to students to do...
-test('calculate order total', (assert) => {
+test('calculate steak order total from cart', (assert) => {
     // arrange
-    const expected = 22.30;
+    const expected = 283.00;
 
     // act
     const orderTotal = calcOrderTotal(cart, steaks);

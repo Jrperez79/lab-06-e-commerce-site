@@ -6,14 +6,14 @@ const test = QUnit.test;
 
 QUnit.module('Render Line Item');
 
-test('renders a line item', assert => {
+test('renders a line item for each selected steak and with quantity', assert => {
     // arrange
     const lineItem = {
         id: 'filet-mignon',
-        quantity: 3
+        quantity: 2
     };
     const steak = findById(steaks, lineItem.id);
-    const expected = '<tr><td class="align-left">Red Apple</td><td>3</td><td>$1.00</td><td class="line-item-total">$3.00</td></tr>';
+    const expected = '<tr><td class="align-left">Filet Mignon</td><td>2</td><td>$20.00</td><td class="line-item-total">$40.00</td></tr>';
 
     // act
     const dom = renderLineItem(lineItem, steak);
