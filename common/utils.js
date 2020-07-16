@@ -26,7 +26,7 @@ export function calcLineTotal(quantity, price) {
     return roundCurrency(amount);
 }
 
-// fun with JavaScript maths and floating point numbers!
+// This help with JS quirks. Think to zeros with /100 gives you two decimal points
 function roundCurrency(amount) {
     return Math.round(amount * 100) / 100;
 }

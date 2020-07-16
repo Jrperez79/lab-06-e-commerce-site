@@ -1,10 +1,17 @@
-import cart from '../data/cart.js';
 import steaks from '../data/steak.js';
 import { findById, calcOrderTotal, toUSD } from '../common/utils.js';
 import renderLineItem from './render-line-item.js';
 
 const tbody = document.querySelector('tbody');
 const orderTotalCell = document.getElementById('order-total-cell');
+const placeOrderButton = document.getElementById('order-button');
+
+// initializes empty cart
+const initializedEmptyCart = '[]';
+
+// This initializes an empty cart as a fallback in case nothing in localStorage
+const cartInLocalStorage = localStorage.getItem('CART') || initializedEmptyCart;
+const cart = JSON.parse(cartInLocalStorage);
 
 for (let i = 0; i < cart.length; i++) {
     const lineItem = cart[i];
@@ -16,3 +23,19 @@ for (let i = 0; i < cart.length; i++) {
 
 const orderTotal = calcOrderTotal(cart, steaks);
 orderTotalCell.textContent = toUSD(orderTotal);
+
+// if the cart is empty
+if (cart.length === 0) {
+    //Disable the place order button
+    placeOrderButton.disabled = true;
+}
+else { 
+    placeOrderButton.addEventListener('click', () => {
+        // On Click, Removes the Cart from local storage
+        localStorage.removeItem('CART');
+        // launch an alert with the current state of cart
+        alert('Order placed:\n' + JSON.stringify(cart, true, 2));
+        // Redirects the User to the Home page.
+        window.location = '../';
+    });
+}
