@@ -6,7 +6,10 @@ const tbody = document.querySelector('tbody');
 const orderTotalCell = document.getElementById('order-total-cell');
 const placeOrderButton = document.getElementById('order-button');
 
+// initializes empty cart
 const initializedEmptyCart = '[]';
+
+// This initializes an empty cart as a fallback in case nothing in localStorage
 const cartInLocalStorage = localStorage.getItem('CART') || initializedEmptyCart;
 const cart = JSON.parse(cartInLocalStorage);
 
