@@ -1,3 +1,4 @@
+// All the hard coded in the product list: id, name, image, description, category and price
 const filetMignon = {
     id: 'filet-mignon',
     name: 'Filet Mignon',

@@ -13,7 +13,7 @@ export function findById(items, id) {
     return null;
 }
 
-
+// function to return a style of a particular currency
 export function toUSD(number) {
     return number.toLocaleString('en-US', { 
         style: 'currency', 
@@ -21,6 +21,7 @@ export function toUSD(number) {
     });
 }
 
+// function that calculates the amount of items and price with rounded currency
 export function calcLineTotal(quantity, price) {
     const amount = quantity * price;
     return roundCurrency(amount);
@@ -31,6 +32,7 @@ function roundCurrency(amount) {
     return Math.round(amount * 100) / 100;
 }
 
+// Calculates the total items or (steaks) in the cart and adds amount and price
 export function calcOrderTotal(cart, steaks) {
     let orderTotal = 0;
 

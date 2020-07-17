@@ -1,5 +1,6 @@
 import { findById } from '../common/utils.js';
 
+// This function pulls in a steak from findById via data steak.js
 function renderSteak(steak) {
     const li = document.createElement('li');
     li.className = steak.category;
@@ -24,6 +25,7 @@ function renderSteak(steak) {
     // });
     p.textContent = usd;
     
+    // Create a button for each item added to the product list page so you can select it to the cart
     const button = document.createElement('button');
     button.textContent = 'Add';
     button.value = steak.id;
@@ -56,7 +58,7 @@ function renderSteak(steak) {
         localStorage.setItem('CART', stringCart);
 
         // tell user we added one steak to the cart
-        alert('You have place 1 ' + steak.name + ' in your cart.');
+        alert('You have placed 1 ' + steak.name + ' in your cart.');
 
     });
 

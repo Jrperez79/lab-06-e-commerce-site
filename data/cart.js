@@ -1,3 +1,4 @@
+// Hard codes items for the cart
 const cart = [{
     id: 'filet-mignon',
     quantity: 2
